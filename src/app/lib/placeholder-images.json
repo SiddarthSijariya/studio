@@ -4,19 +4,19 @@
     {
       "id": "hero-abstract",
       "description": "Abstract 3D floating intelligence",
-      "imageUrl": "https://picsum.photos/seed/sijariya-hero/1200/800",
+      "imageUrl": "https://picsum.photos/seed/sijariya-hero-v3/1200/800",
       "imageHint": "abstract intelligence"
     },
     {
       "id": "about-visual",
       "description": "Abstract data architecture visual",
-      "imageUrl": "https://picsum.photos/seed/sijariya-about/600/800",
+      "imageUrl": "https://picsum.photos/seed/sijariya-about-v3/600/800",
       "imageHint": "abstract architecture"
     },
     {
       "id": "profile-image",
       "description": "Siddarth Sijariya - AI & ML Engineer Portrait",
-      "imageUrl": "https://picsum.photos/seed/sijariya-profile-new/800/800",
+      "imageUrl": "https://picsum.photos/seed/sijariya-profile-v3/800/800",
       "imageHint": "professional portrait"
     }
   ]
