@@ -32,9 +32,9 @@ export const Hero = () => {
       >
         <FadeIn delay={0.1}>
           <TiltCard className="mb-12">
-            <div className="relative w-48 h-48 md:w-56 md:h-56 p-1 rounded-full glass border border-primary/20 overflow-hidden group">
-              <div className="absolute inset-0 bg-primary/20 animate-pulse group-hover:bg-primary/40 transition-colors" />
-              <div className="relative w-full h-full rounded-full overflow-hidden">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 p-1.5 rounded-full glass border border-primary/20 overflow-hidden group shadow-2xl shadow-primary/10">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-pulse group-hover:opacity-100 transition-opacity" />
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-background/20">
                 {profileImg && (
                   <Image
                     src={profileImg.imageUrl}
@@ -42,10 +42,11 @@ export const Hero = () => {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     data-ai-hint={profileImg.imageHint}
+                    priority
                   />
                 )}
               </div>
-              <div className="absolute inset-0 border-2 border-primary/50 rounded-full scale-95 group-hover:scale-100 transition-transform duration-500" />
+              <div className="absolute inset-0 border-2 border-primary/50 rounded-full scale-95 group-hover:scale-105 transition-all duration-500 pointer-events-none" />
             </div>
           </TiltCard>
         </FadeIn>
