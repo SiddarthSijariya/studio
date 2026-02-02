@@ -3,20 +3,20 @@
   "placeholderImages": [
     {
       "id": "hero-abstract",
-      "description": "Abstract 3D floating intelligence",
-      "imageUrl": "https://picsum.photos/seed/sijariya-hero-v3/1200/800",
-      "imageHint": "abstract intelligence"
+      "description": "",
+      "imageUrl": "/home/user/studio/src/components/portfolio/IMG_0005.JPG",
+      "imageHint": ""
     },
     {
       "id": "about-visual",
-      "description": "Abstract data architecture visual",
-      "imageUrl": "https://picsum.photos/seed/sijariya-about-v3/600/800",
-      "imageHint": "abstract architecture"
+      "description": "",
+      "imageUrl": "/home/user/studio/src/components/portfolio/IMG_0005.JPG",
+      "imageHint": ""
     },
     {
       "id": "profile-image",
      
-      "imageUrl": "https://drive.google.com/file/d/1hrnurIfzgqH2lNb0lRuMvglUkSpFb_ww/view?usp=drivesdk",
+      "imageUrl": "/home/user/studio/src/components/portfolio/IMG_0005.JPG",
       
     }
   ]
