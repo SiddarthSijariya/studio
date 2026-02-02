@@ -6,6 +6,7 @@ import { Hero } from "@/components/portfolio/hero";
 import { About } from "@/components/portfolio/about";
 import { Skills } from "@/components/portfolio/skills";
 import { Projects } from "@/components/portfolio/projects";
+import { AILearningTool } from "@/components/portfolio/ai-tool";
 import { Education } from "@/components/portfolio/education";
 import { Contact } from "@/components/portfolio/contact";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -44,6 +45,7 @@ export default function PortfolioPage() {
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
           <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+          <a href="#ai-tool" className="hover:text-primary transition-colors">AI Tool</a>
           <a href="#education" className="hover:text-primary transition-colors">Education</a>
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </motion.nav>
@@ -54,6 +56,9 @@ export default function PortfolioPage() {
       <About />
       <Skills />
       <Projects />
+      <div id="ai-tool">
+        <AILearningTool />
+      </div>
       <Education />
       <Contact />
     </main>
