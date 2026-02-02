@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -7,7 +8,6 @@ import { Skills } from "@/components/portfolio/skills";
 import { Projects } from "@/components/portfolio/projects";
 import { Education } from "@/components/portfolio/education";
 import { Contact } from "@/components/portfolio/contact";
-import { AILearningTool } from "@/components/portfolio/ai-tool";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function PortfolioPage() {
@@ -54,7 +54,6 @@ export default function PortfolioPage() {
       <About />
       <Skills />
       <Projects />
-      <AILearningTool />
       <Education />
       <Contact />
     </main>
