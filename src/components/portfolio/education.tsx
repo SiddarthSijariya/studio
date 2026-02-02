@@ -1,9 +1,8 @@
-
 "use client";
 
 import React from "react";
 import { Reveal } from "./motion-wrapper";
-import { GraduationCap, Award, Medal, Trophy, Code } from "lucide-react";
+import { Award, Medal, Trophy, Code } from "lucide-react";
 
 const educationData = [
   {
@@ -35,7 +34,7 @@ const achievements = [
 
 export const Education = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section id="education" className="py-24 md:py-32 bg-background">
       <div className="container px-6 md:px-12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div>

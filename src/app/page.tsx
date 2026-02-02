@@ -1,7 +1,6 @@
-
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Hero } from "@/components/portfolio/hero";
 import { About } from "@/components/portfolio/about";
 import { Skills } from "@/components/portfolio/skills";
@@ -27,23 +26,25 @@ export default function PortfolioPage() {
         style={{ scaleX }}
       />
 
-      {/* Navigation Header (Minimal Glass) */}
+      {/* Navigation Header */}
       <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-8 pointer-events-none">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-headline text-primary pointer-events-auto"
         >
-          Sijariya<span className="italic">.</span>
+          <a href="#">Sijariya<span className="italic">.</span></a>
         </motion.div>
         
         <motion.nav 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="hidden md:flex gap-12 glass px-8 py-3 rounded-full border border-white/5 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground/80 pointer-events-auto"
+          className="hidden lg:flex gap-8 glass px-8 py-3 rounded-full border border-white/5 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground/80 pointer-events-auto"
         >
           <a href="#about" className="hover:text-primary transition-colors">About</a>
+          <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
           <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+          <a href="#education" className="hover:text-primary transition-colors">Education</a>
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </motion.nav>
       </header>

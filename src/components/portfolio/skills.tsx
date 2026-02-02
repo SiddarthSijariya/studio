@@ -1,10 +1,9 @@
-
 "use client";
 
 import React from "react";
 import { Reveal } from "./motion-wrapper";
 import { TiltCard } from "./tilt-card";
-import { Code2, BrainCircuit, Users, LineChart, Cpu, Terminal } from "lucide-react";
+import { BrainCircuit, Users, Terminal } from "lucide-react";
 
 const skillCategories = [
   {
@@ -26,7 +25,7 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section className="py-24 md:py-32 bg-card/30">
+    <section id="skills" className="py-24 md:py-32 bg-card/30">
       <div className="container px-6 md:px-12 mx-auto">
         <Reveal className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-headline mb-4">Mastered <span className="text-primary italic">Capabilities</span></h2>
