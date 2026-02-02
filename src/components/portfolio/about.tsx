@@ -67,7 +67,6 @@ export const About = () => {
                   data-ai-hint={visual.imageHint}
                 />
               )}
-              <div className="absolute inset-0 border border-white/5 rounded-xl z-10 m-2" />
             </FadeIn>
           </div>
         </div>
