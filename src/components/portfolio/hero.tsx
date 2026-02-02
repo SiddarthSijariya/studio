@@ -13,7 +13,7 @@ export const Hero = () => {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
-  const resumeLink = "https://drive.google.com/file/d/1hrnurIfzgqH2lNb0lRuMvglUkSpFb_ww/view?usp=drivesdk";
+  const resumeLink = "https://drive.google.com/file/d/1__XzXGqDBccjsFPDe-VCzURTY9FZoKaD/view?usp=drivesdk";
 
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background pt-32 pb-20">

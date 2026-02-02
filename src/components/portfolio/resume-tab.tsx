@@ -7,7 +7,7 @@ import { FileDown } from "lucide-react";
 import { TiltCard } from "./tilt-card";
 
 export const ResumeTab = () => {
-  const resumeLink = "https://drive.google.com/file/d/1hrnurIfzgqH2lNb0lRuMvglUkSpFb_ww/view?usp=drivesdk";
+  const resumeLink = "https://drive.google.com/file/d/1__XzXGqDBccjsFPDe-VCzURTY9FZoKaD/view?usp=drivesdk";
 
   return (
     <div className="fixed bottom-10 right-10 z-[60] pointer-events-auto hidden md:block">
