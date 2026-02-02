@@ -13,6 +13,8 @@ export const Hero = () => {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
+  const resumeLink = "https://drive.google.com/file/d/1hrnurIfzgqH2lNb0lRuMvglUkSpFb_ww/view?usp=drivesdk";
+
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background pt-32 pb-20">
       {/* Background Animated Elements */}
@@ -63,7 +65,7 @@ export const Hero = () => {
           
           <TiltCard>
             <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none bg-primary text-primary-foreground border-white/10 hover:bg-primary/90 shadow-lg shadow-primary/20 group transition-all">
-              <a href="#" download="Siddarth_Sijariya_Resume.pdf">
+              <a href={resumeLink} target="_blank" rel="noopener noreferrer">
                 Download Resume
                 <FileDown className="ml-2 h-4 w-4 animate-bounce" />
               </a>
