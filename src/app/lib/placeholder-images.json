@@ -3,21 +3,21 @@
   "placeholderImages": [
     {
       "id": "hero-abstract",
-      "description": "",
-      "imageUrl": "/home/user/studio/src/components/portfolio/IMG_0005.JPG",
-      "imageHint": ""
+      "description": "Abstract 3D floating intelligence",
+      "imageUrl": "https://images.unsplash.com/photo-1680783954745-3249be59e527?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjBpbnRlbGxpZ2VuY2V8ZW58MHx8fHwxNzcwMDY1MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract intelligence"
     },
     {
       "id": "about-visual",
-      "description": "",
-      "imageUrl": "/home/user/studio/src/components/portfolio/IMG_0005.JPG",
-      "imageHint": ""
+      "description": "Abstract data architecture visual",
+      "imageUrl": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3Njk5OTYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract architecture"
     },
     {
       "id": "profile-image",
-     
-      "imageUrl": "/home/user/studio/src/components/portfolio/IMG_0005.JPG",
-      
+      "description": "Siddarth Sijariya - Profile Photo",
+      "imageUrl": "https://drive.google.com/file/d/1hrnurIfzgqH2lNb0lRuMvglUkSpFb_ww/view?usp=drivesdk",
+      "imageHint": "professional man"
     }
   ]
 }
