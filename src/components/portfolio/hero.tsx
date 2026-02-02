@@ -1,18 +1,24 @@
+
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowDownRight } from "lucide-react";
-import { FadeIn } from "./motion-wrapper";
+import { FadeIn, Reveal } from "./motion-wrapper";
+import { TiltCard } from "./tilt-card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export const Hero = () => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
+  const profileImg = PlaceHolderImages.find(img => img.id === "profile-image");
+
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background pt-32 pb-20">
       {/* Background Animated Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-[10%] left-[15%] w-[40vw] h-[40vw] bg-primary/10 rounded-full blur-[120px] animate-float" />
@@ -24,6 +30,26 @@ export const Hero = () => {
         style={{ y: y1, opacity }}
         className="container relative z-10 px-6 md:px-12 flex flex-col items-center text-center max-w-5xl"
       >
+        <FadeIn delay={0.1}>
+          <TiltCard className="mb-12">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 p-1 rounded-full glass border border-primary/20 overflow-hidden group">
+              <div className="absolute inset-0 bg-primary/20 animate-pulse group-hover:bg-primary/40 transition-colors" />
+              <div className="relative w-full h-full rounded-full overflow-hidden">
+                {profileImg && (
+                  <Image
+                    src={profileImg.imageUrl}
+                    alt={profileImg.description}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-ai-hint={profileImg.imageHint}
+                  />
+                )}
+              </div>
+              <div className="absolute inset-0 border-2 border-primary/50 rounded-full scale-95 group-hover:scale-100 transition-transform duration-500" />
+            </div>
+          </TiltCard>
+        </FadeIn>
+
         <FadeIn delay={0.2}>
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.2em] uppercase text-primary border border-primary/20 rounded-full glass">
             Available for Opportunities

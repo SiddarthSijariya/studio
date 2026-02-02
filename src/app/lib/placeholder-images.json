@@ -12,6 +12,12 @@
       "description": "Abstract data architecture visual",
       "imageUrl": "https://picsum.photos/seed/sijariya-about/600/800",
       "imageHint": "abstract architecture"
+    },
+    {
+      "id": "profile-image",
+      "description": "Siddarth Sijariya Profile Portrait",
+      "imageUrl": "https://picsum.photos/seed/sijariya-profile/400/400",
+      "imageHint": "professional portrait"
     }
   ]
 }
