@@ -2,20 +2,15 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowDownRight } from "lucide-react";
 import { FadeIn } from "./motion-wrapper";
-import { TiltCard } from "./tilt-card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export const Hero = () => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-
-  const profileImg = PlaceHolderImages.find(img => img.id === "profile-image");
 
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background pt-32 pb-20">
@@ -30,29 +25,8 @@ export const Hero = () => {
         style={{ y: y1, opacity }}
         className="container relative z-10 px-6 md:px-12 flex flex-col items-center text-center max-w-5xl"
       >
-        <FadeIn delay={0.1}>
-          <TiltCard className="mb-12">
-            <div className="relative w-64 h-96 md:w-72 md:h-[30rem] p-1.5 rounded-2xl glass border border-primary/20 overflow-hidden group shadow-2xl shadow-primary/10">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-pulse group-hover:opacity-100 transition-opacity" />
-              <div className="relative w-full h-full rounded-xl overflow-hidden border-2 border-background/20">
-                {profileImg && (
-                  <Image
-                    src={profileImg.imageUrl}
-                    alt={profileImg.description}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    data-ai-hint={profileImg.imageHint}
-                    priority
-                  />
-                )}
-              </div>
-              <div className="absolute inset-0 border-2 border-primary/50 rounded-2xl scale-95 group-hover:scale-105 transition-all duration-500 pointer-events-none" />
-            </div>
-          </TiltCard>
-        </FadeIn>
-
         <FadeIn delay={0.2}>
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-[0.2em] uppercase text-primary border border-primary/20 rounded-full glass">
+          <span className="inline-block px-4 py-1.5 mb-8 text-xs font-medium tracking-[0.2em] uppercase text-primary border border-primary/20 rounded-full glass">
             Available for Opportunities
           </span>
         </FadeIn>
@@ -77,13 +51,13 @@ export const Hero = () => {
         </FadeIn>
 
         <FadeIn delay={1.0} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <Button asChild size="lg" className="h-14 px-8 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
+          <Button asChild size="lg" className="h-16 px-10 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
             <a href="#projects">
               View Projects
               <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="h-14 px-8 text-base rounded-none glass border-white/10 hover:bg-white/5 transition-all">
+          <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none glass border-white/10 hover:bg-white/5 transition-all">
             <a href="#contact">
               Contact Me
               <ArrowDownRight className="ml-2 h-4 w-4" />
