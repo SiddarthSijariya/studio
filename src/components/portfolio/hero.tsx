@@ -4,8 +4,9 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ArrowDownRight } from "lucide-react";
+import { ChevronRight, FileDown } from "lucide-react";
 import { FadeIn } from "./motion-wrapper";
+import { TiltCard } from "./tilt-card";
 
 export const Hero = () => {
   const { scrollY } = useScroll();
@@ -51,18 +52,23 @@ export const Hero = () => {
         </FadeIn>
 
         <FadeIn delay={1.0} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <Button asChild size="lg" className="h-16 px-10 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
-            <a href="#projects">
-              View Projects
-              <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none glass border-white/10 hover:bg-white/5 transition-all">
-            <a href="#contact">
-              Contact Me
-              <ArrowDownRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+          <TiltCard>
+            <Button asChild size="lg" className="h-16 px-10 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
+              <a href="#projects">
+                View Projects
+                <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+          </TiltCard>
+          
+          <TiltCard>
+            <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none glass border-primary/20 hover:bg-primary/10 text-primary group transition-all">
+              <a href="#" download="Siddarth_Sijariya_Resume.pdf">
+                Download Resume
+                <FileDown className="ml-2 h-4 w-4 animate-bounce" />
+              </a>
+            </Button>
+          </TiltCard>
         </FadeIn>
       </motion.div>
 
