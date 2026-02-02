@@ -51,7 +51,7 @@ export const Hero = () => {
           </p>
         </FadeIn>
 
-        <FadeIn delay={1.0} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <FadeIn delay={1.0} className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
           <TiltCard>
             <Button asChild size="lg" className="h-16 px-10 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
               <a href="#projects">
@@ -62,7 +62,7 @@ export const Hero = () => {
           </TiltCard>
           
           <TiltCard>
-            <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none glass border-primary/20 hover:bg-primary/10 text-primary group transition-all">
+            <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none bg-primary text-primary-foreground border-white/10 hover:bg-primary/90 shadow-lg shadow-primary/20 group transition-all">
               <a href="#" download="Siddarth_Sijariya_Resume.pdf">
                 Download Resume
                 <FileDown className="ml-2 h-4 w-4 animate-bounce" />
