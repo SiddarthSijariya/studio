@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, FileDown } from "lucide-react";
 import { FadeIn } from "./motion-wrapper";
 import { TiltCard } from "./tilt-card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Image from "next/image";
 
 export const Hero = () => {
   const { scrollY } = useScroll();
@@ -14,6 +16,7 @@ export const Hero = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const resumeLink = "https://drive.google.com/file/d/1__XzXGqDBccjsFPDe-VCzURTY9FZoKaD/view?usp=drivesdk";
+  const profileImage = PlaceHolderImages.find(img => img.id === 'profile-image');
 
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background pt-32 pb-20">
@@ -26,51 +29,90 @@ export const Hero = () => {
 
       <motion.div 
         style={{ y: y1, opacity }}
-        className="container relative z-10 px-6 md:px-12 flex flex-col items-center text-center max-w-5xl"
+        className="container relative z-10 px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between gap-16 max-w-7xl"
       >
-        <FadeIn delay={0.2}>
-          <span className="inline-block px-4 py-1.5 mb-8 text-xs font-medium tracking-[0.2em] uppercase text-primary border border-primary/20 rounded-full glass">
-            Available for Opportunities
-          </span>
-        </FadeIn>
+        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <FadeIn delay={0.2}>
+            <span className="inline-block px-4 py-1.5 mb-8 text-xs font-medium tracking-[0.2em] uppercase text-primary border border-primary/20 rounded-full glass">
+              Available for Opportunities
+            </span>
+          </FadeIn>
 
-        <FadeIn delay={0.4}>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-headline mb-6 tracking-tight text-foreground leading-[0.9]">
-            Siddarth <br />
-            <span className="text-primary italic">Sijariya</span>
-          </h1>
-        </FadeIn>
+          <FadeIn delay={0.4}>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-headline mb-6 tracking-tight text-foreground leading-[0.9]">
+              Siddarth <br />
+              <span className="text-primary italic">Sijariya</span>
+            </h1>
+          </FadeIn>
 
-        <FadeIn delay={0.6}>
-          <p className="text-lg md:text-2xl font-body text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            AI & Machine Learning Engineer <span className="mx-2 text-primary/40">|</span> Data & Intelligence Systems
-          </p>
-        </FadeIn>
+          <FadeIn delay={0.6}>
+            <p className="text-lg md:text-2xl font-body text-muted-foreground mb-10 max-w-2xl leading-relaxed">
+              AI & Machine Learning Engineer <span className="mx-2 text-primary/40">|</span> Data & Intelligence Systems
+            </p>
+          </FadeIn>
 
-        <FadeIn delay={0.8}>
-          <p className="text-base md:text-lg italic font-headline text-foreground/80 mb-12 max-w-xl">
-            “I design intelligent systems and data-driven solutions that transform complexity into clarity.”
-          </p>
-        </FadeIn>
+          <FadeIn delay={0.8}>
+            <p className="text-base md:text-lg italic font-headline text-foreground/80 mb-12 max-w-xl">
+              “I design intelligent systems and data-driven solutions that transform complexity into clarity.”
+            </p>
+          </FadeIn>
 
-        <FadeIn delay={1.0} className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-          <TiltCard>
-            <Button asChild size="lg" className="h-16 px-10 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
-              <a href="#projects">
-                View Projects
-                <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </TiltCard>
+          <FadeIn delay={1.0} className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+            <TiltCard>
+              <Button asChild size="lg" className="h-16 px-10 text-base rounded-none border-b-2 border-primary bg-primary/10 hover:bg-primary/20 text-foreground group transition-all">
+                <a href="#projects">
+                  View Projects
+                  <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            </TiltCard>
+            
+            <TiltCard>
+              <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none bg-primary text-primary-foreground border-white/10 hover:bg-primary/90 shadow-lg shadow-primary/20 group transition-all">
+                <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+                  Download Resume
+                  <FileDown className="ml-2 h-4 w-4 animate-bounce" />
+                </a>
+              </Button>
+            </TiltCard>
+          </FadeIn>
+        </div>
+
+        {/* Floating Profile Image */}
+        <FadeIn delay={0.5} className="flex-1 relative max-w-md w-full">
+          <motion.div
+            animate={{ 
+              y: [0, -20, 0],
+              rotate: [0, 2, 0, -2, 0]
+            }}
+            transition={{ 
+              duration: 6, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="relative z-10"
+          >
+            <TiltCard>
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden glass border border-white/10 shadow-2xl shadow-primary/20 group">
+                <Image 
+                  src={profileImage?.imageUrl || ""}
+                  alt="Siddarth Sijariya"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  data-ai-hint={profileImage?.imageHint}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="glass px-4 py-2 rounded-xl border border-white/10 inline-block">
+                    <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary">AI & ML Lead</span>
+                  </div>
+                </div>
+              </div>
+            </TiltCard>
+          </motion.div>
           
-          <TiltCard>
-            <Button asChild size="lg" variant="outline" className="h-16 px-10 text-base rounded-none bg-primary text-primary-foreground border-white/10 hover:bg-primary/90 shadow-lg shadow-primary/20 group transition-all">
-              <a href={resumeLink} target="_blank" rel="noopener noreferrer">
-                Download Resume
-                <FileDown className="ml-2 h-4 w-4 animate-bounce" />
-              </a>
-            </Button>
-          </TiltCard>
+          {/* Decorative background circle */}
+          <div className="absolute -inset-4 bg-primary/20 rounded-[40px] blur-3xl -z-10 animate-pulse" />
         </FadeIn>
       </motion.div>
 

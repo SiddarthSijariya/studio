@@ -9,6 +9,7 @@ import { Projects } from "@/components/portfolio/projects";
 import { Education } from "@/components/portfolio/education";
 import { Contact } from "@/components/portfolio/contact";
 import { ResumeTab } from "@/components/portfolio/resume-tab";
+import { AILearningTool } from "@/components/portfolio/ai-tool";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function PortfolioPage() {
@@ -45,6 +46,7 @@ export default function PortfolioPage() {
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
           <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+          <a href="#ai-tool" className="hover:text-primary transition-colors">AI Path</a>
           <a href="#education" className="hover:text-primary transition-colors">Education</a>
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </motion.nav>
@@ -55,6 +57,9 @@ export default function PortfolioPage() {
       <About />
       <Skills />
       <Projects />
+      <section id="ai-tool">
+        <AILearningTool />
+      </section>
       <Education />
       <Contact />
 
