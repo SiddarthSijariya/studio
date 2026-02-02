@@ -1,0 +1,17 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-abstract",
+      "description": "Abstract 3D floating intelligence",
+      "imageUrl": "https://picsum.photos/seed/sijariya-hero/1200/800",
+      "imageHint": "abstract intelligence"
+    },
+    {
+      "id": "about-visual",
+      "description": "Abstract data architecture visual",
+      "imageUrl": "https://picsum.photos/seed/sijariya-about/600/800",
+      "imageHint": "abstract architecture"
+    }
+  ]
+}
